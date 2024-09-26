@@ -1,0 +1,198 @@
+/* Color Scheme */
+:root {
+    --bg-color: #000000; 
+    --text-color: #ffffff; 
+    --accent1: #00bfff; 
+    --accent2: #f73b99; 
+    --accent3: #00949e; 
+    --accent4: #ba8a06; 
+}
+
+/* Main body styles */
+body {
+    /* Gradient background with animation */
+    background: linear-gradient(45deg, var(--bg-color), var(--accent1), rgba(255, 105, 180, 5));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* hide h2 elements in lyrics for accessibility */
+.lyrics h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main styles */
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 4em;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    text-shadow: 2px 2px var(--accent3);
+}
+
+/* Lyrics container */
+.lyrics {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Verse styles w different background colors */
+.verse1 {
+    background-color: rgba(12, 75, 96, 0.832);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.verse2 {
+    background-color: rgba(24, 101, 3, 0.832);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.verse3 {
+    background-color: rgba(69, 22, 171, 0.832);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Pre-chorus styles */
+.pre-chorus {
+    background-color: rgba(255, 105, 180, 0.553);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+/* Bridge styles */
+.bridge {
+    background-color: rgba(255,215,0,0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Chorus and Outro styles */
+.chorus,
+.outro {
+    position: relative;
+    margin-bottom: 40px;
+    border: 5px solid var(--accent1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.outro {
+    border-color: var(--accent2);
+}
+
+/* Image styles for chorus and outro */
+.chorus-image,
+.outro-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* Text overlay styles for chorus and outro */
+.chorus p,
+.outro p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.chorus p {
+    background-color: rgba(0, 191, 255, 0.1);
+}
+
+.outro p {
+    background-color: rgba(255, 105, 180, 0.1);
+}
+
+/* Hover effects for images and lyrics */
+.chorus:hover .chorus-image,
+.outro:hover .outro-image {
+    transform: scale(1.05);
+}
+
+.chorus:hover p,
+.outro:hover p {
+    background-color: rgba(26, 11, 46, 0.9);
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Link styles */
+a {
+    color: var(--accent1);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--accent3);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .chorus p,
+    .outro p {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}
+
+/* Animated background keyframes */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
